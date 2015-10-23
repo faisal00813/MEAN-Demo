@@ -55,6 +55,8 @@
     "view-helpers": "latest"
   },
   "devDependencies": {
+    "qs": "latest",
+    "connect-modrewrite": "latest",
     "del": "latest",
     "expect.js": "latest",
     "gulp": "latest",
