@@ -2,7 +2,7 @@
 
 module.exports = {
   //db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
-  db: 'mongodb://admin:admin@ds043694.mongolab.com:43694/texthub',
+  db: 'mongodb://admin:admin@ds045054.mongolab.com:45054/heroku_tn2nk75r',
   debug: true,
   logging: {
     format: 'tiny'
