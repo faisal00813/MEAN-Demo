@@ -21,12 +21,11 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
-    "bower": "latest",
     "body-parser": "latest",
+    "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
-    "qs": "latest",
-    "connect-modrewrite": "latest",
+    "connect-modrewrite": "^0.8.2",
     "consolidate": "latest",
     "cookie-parser": "latest",
     "errorhandler": "latest",
@@ -48,6 +47,7 @@
     "passport-local": "latest",
     "passport-twitter": "latest",
     "q": "latest",
+    "qs": "^5.2.0",
     "request": "latest",
     "serve-favicon": "latest",
     "shelljs": "latest",
@@ -55,8 +55,8 @@
     "view-helpers": "latest"
   },
   "devDependencies": {
-    "qs": "latest",
-    "connect-modrewrite": "latest",
+    "qs": "^5.2.0",
+    "connect-modrewrite": "^0.8.2",
     "del": "latest",
     "expect.js": "latest",
     "gulp": "latest",
