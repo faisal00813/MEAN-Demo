@@ -1,7 +1,8 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
+  //db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-dev',
+  db: 'mongodb://admin:admin@ds043694.mongolab.com:43694/texthub',
   debug: true,
   logging: {
     format: 'tiny'
@@ -13,7 +14,7 @@ module.exports = {
   },
   hostname: 'http://localhost:3000',
   app: {
-    name: 'MEAN - A Modern Stack - Development'
+    name: 'Demo for Texthub'
   },
   strategies: {
     local: {

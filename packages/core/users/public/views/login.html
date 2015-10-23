@@ -1,34 +1,34 @@
+
 <div data-ng-controller="LoginCtrl as login">
+    <div class="middle-box text-center loginscreen  animated fadeInDown">
+        <div> 
+        <div class="alert alert-danger animated fadeIn" ng-show="login.loginError">{{login.loginError}}</div>
+            <div>
 
-    <div class="alert alert-danger animated fadeIn" ng-show="login.loginError">{{login.loginError}}</div>
+                <h1 class="logo-name">TH</h1>
 
-    <h2>Login</h2>
+            </div>
+            <h3>Welcome to TextHub</h3>
+           
+            <p>Login in. To see it in action.</p>
+            <form id="login_form" class="m-t" ng-submit="login.login()">
+                <div class="form-group">
+                    <input required id="email_block" name="email" type="email" class="form-control" placeholder="Username"  ng-model="login.user.email">
+                </div>
+                <div class="form-group">
+                    <input required id="password_block" name="password" type="password" class="form-control" placeholder="Password"ng-model="login.user.password">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
 
-    <form id="login_form" ng-submit="login.login()">
-        <div class="input-wrapper">
-            <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="login.user.email">
-            <div class="error_message">Please enter a correct info #</div>
-            <span class="pic email"></span>
+                <div class="forgot_password">
+                     <a ui-sref='forgot-password'>Forgot your password?</a>
+                 </div>
+                 <a ui-sref='auth.register' >Sign up</a>
+            </form>
+          
         </div>
-        <div class="input-wrapper">
-            <input required id="password_block" name="password" type="{{login.input.type}}" placeholder="{{login.input.placeholder}}" ng-model="login.user.password">
-            <div class="error_message">Please enter a correct info #</div>
-                <span class="pic password {{login.input.iconClass}}" ng-click = "login.togglePasswordVisible()">
-                      <div class="hide_text_password">
-                          {{login.input.tooltipText}}
-                      </div>
-                </span>
-        </div>
-        <div class="forgot_password">
-            <a ui-sref='forgot-password'>Forgot your password?</a>
-        </div>
-        <div class="button_login">
-            <button type="submit" class="submit_button">Login</button>
-            <p>Don't have an account?</p>
-            <a ui-sref='auth.register' >Sign up</a>
-        </div>
-        <div class="woman_ninja_bottom">
-            <img src="/theme/assets/img/woman_ninja.png" alt="#">
-        </div>
-    </form>
-</div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <!-- <script src="js/jquery-2.1.1.js"></script>
+     <script src="js/bootstrap.min.js"></script> -->

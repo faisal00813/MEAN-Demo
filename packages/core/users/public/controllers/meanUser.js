@@ -30,7 +30,9 @@ angular.module('mean.users')
         iconClass: '',
         tooltipText: 'Show password'
       };
-
+    if (vm.authenticated) {
+        $location.path("inspiniaTheme/landing");  
+      };
       vm.togglePasswordVisible = function() {
         vm.input.type = vm.input.type === 'text' ? 'password' : 'text';
         vm.input.placeholder = vm.input.placeholder === 'Password' ? 'Visible Password' : 'Password';
@@ -41,7 +43,8 @@ angular.module('mean.users')
       $rootScope.$on('loginfailed', function(){
         vm.loginError = MeanUser.loginError;
       });
-
+    
+      
       // Register the login() function
       vm.login = function() {
         MeanUser.login(this.user);

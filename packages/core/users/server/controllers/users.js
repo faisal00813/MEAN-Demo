@@ -51,7 +51,7 @@ module.exports = function(MeanUser) {
          */
         signin: function(req, res) {
           if (req.isAuthenticated()) {
-            return res.redirect('/');
+            return res.redirect('/inspiniaTheme/landing');
           }
           res.redirect('/login');
         },
@@ -69,14 +69,14 @@ module.exports = function(MeanUser) {
             });
 
             req.logout();
-            res.redirect('/');
+            res.redirect('/login');
         },
 
         /**
          * Session
          */
         session: function(req, res) {
-          res.redirect('/');
+          res.redirect('/inspiniaTheme/landing');
         },
 
         /**

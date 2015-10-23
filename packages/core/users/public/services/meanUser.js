@@ -69,6 +69,7 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
         encodedUser = decodeURI(b64_to_utf8(response.token.split('.')[1]));
         user = JSON.parse(encodedUser); 
       }
+      response.redirect = "inspiniaTheme/landing";
       destination = angular.isDefined(response.redirect) ? response.redirect : destination;
       this.user = user || response;
       this.loggedin = true;
@@ -93,7 +94,8 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
 
     MeanUserKlass.prototype.login = function (user) {
       // this is an ugly hack due to mean-admin needs
-      var destination = $location.path().indexOf('/login') === -1 ? $location.absUrl() : false;
+      //var destination = $location.path().indexOf('/login') === -1 ? $location.absUrl() : false;
+      var destination = $location.absUrl()+"/inspiniaTheme/landing"
       $http.post('/api/login', {
           email: user.email,
           password: user.password,
@@ -163,7 +165,16 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
 
       return deferred.promise;
     };
-
+    MeanUserKlass.prototype.isAuthenticated = function() {
+     $http.get('/api/loggedin').success(function(user) {
+        // Authenticated
+        if (user !== '0') {
+          return true;
+        }
+        // Not Authenticated
+        else return false;
+      });
+    };
     MeanUserKlass.prototype.checkLoggedOut = function() {
        // Check if the user is not connected
       // Initialize a new promise
