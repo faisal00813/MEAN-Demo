@@ -19,6 +19,7 @@
     "postinstall": "node tools/scripts/postinstall.js"
   },
   "dependencies": {
+    "connect-modrewrite": "latest",
     "assetmanager": "latest",
     "async": "latest",
     "bower": "latest",
