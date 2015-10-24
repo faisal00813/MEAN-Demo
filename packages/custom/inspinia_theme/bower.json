@@ -2,6 +2,6 @@
   "name": "inspinia_theme",
   "version": "0.0.1",
   "dependencies": {
-   // "inspinia": "rodneyzhang/inspinia#~1.0.4"
+    "inspinia": "rodneyzhang/inspinia#~1.0.4"
   }
 }
